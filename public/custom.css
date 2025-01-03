@@ -1,0 +1,291 @@
+/* General Styles */
+body {
+  background-color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h3 {
+  color: #28a745;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-item {
+  background-color: #fff;
+  border: 1px solid #28a745;
+  color: #000;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.list-group-item img {
+  margin-right: 10px;
+}
+
+.list-group-item span {
+  font-weight: bold;
+}
+
+.list-group-item:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.btn-outline-success {
+  border: 2px solid #28a745;
+  color: #28a745;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.form-control {
+  border: 2px solid #28a745;
+  border-radius: 5px;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: #218838;
+  box-shadow: 0 0 5px rgba(33, 136, 56, 0.5);
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pie-chart-section, .calendar-section, .notes-section {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pie-chart-section:hover, .calendar-section:hover, .notes-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pie-chart-section canvas, .calendar-section #calendar {
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #fff, #ddd);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.title_home_page {
+  background: linear-gradient(145deg, #28a745, #1e7e34); /* Green gradient background */
+  color: white; /* White text for high contrast */
+  padding: 20px 30px; /* Spacing for better readability */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  text-align: center; /* Center align the text */
+  margin: 20px auto; /* Add spacing and center the container */
+  width: 90%; /* Responsive width */
+  max-width: 800px; /* Limit the maximum width */
+  font-family: 'Poppins', sans-serif; /* Professional font */
+}
+
+.title_home_page h1 {
+  font-size: 2.5rem; /* Large font size for emphasis */
+  font-weight: 700; /* Bold font */
+  background: linear-gradient(145deg, white, #28a745); /* Gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+  margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 768px) {
+  .title_home_page h1 {
+      font-size: 1.8rem; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  --bs-body-bg: rgba(35, 35, 35);
+  --bs-tertiary-bg-rgb: rgba(35, 35, 35);
+  --bs-heading-color: white;
+  --bs-navbar-toggler-border-color: white !important;
+  --button-bg: rgba(15, 15, 15, 1);
+  --bs-card-color: white;
+}
+
+body.dark-mode .card-title {
+  color: white !important;
+}
+
+body.dark-mode .navbar-toggler-icon {
+  filter: invert();
+  -webkit-filter: invert();
+}
+
+body.dark-mode label {
+  color: white;
+}
+
+body.dark-mode input {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+
+body.dark-mode input::placeholder {
+  color: rgb(240, 240, 240);
+}
+
+body.darkmode .navbar-toggler {
+  border-color: white;
+}
+
+body.dark-mode div[id="user-info-popup"] {
+  background-color: rgba(35, 35, 35) !important;
+}
+
+body.dark-mode div[id="user-info-popup"] button {
+  color: white;
+  background-color: var(--button-bg);
+  border-color: white !important;
+}
+
+/* Button Styling */
+#user-info-popup button {
+  margin-top: 20px !important;
+  padding: 12px 20px !important;
+  border-radius: 30px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important; /* Bold text for better visibility */
+  cursor: pointer !important;
+  border: none !important;
+  background: linear-gradient(90deg, #6a11cb, #2575fc) !important;
+  color: white !important; /* White for better contrast */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important; /* Subtle text shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#user-info-popup button:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Animated Gradient Background */
+#user-info-popup button:before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 300% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8)) !important;
+  transition: all 0.3s ease !important;
+  z-index: 0 !important;
+  transform: skewX(-45deg) !important;
+}
+
+#user-info-popup button:hover:before {
+  left: -50% !important;
+}
+
+/* Ensure text stays on top */
+#user-info-popup button span {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Secondary Button */
+#user-info-popup button:nth-child(2) {
+  background: linear-gradient(145deg, #e4e9f2, #d6dbe6) !important;
+  color: #495057 !important;
+  font-weight: 700 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#user-info-popup button:nth-child(2):hover {
+  background: linear-gradient(145deg, #d6dbe6, #c6cddc) !important;
+  transform: scale(1.05) !important;
+}
+
+#user-info-popup button:nth-child(2):before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 300% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(100, 100, 255, 0.1), rgba(150, 150, 255, 0.2)) !important;
+  transition: all 0.3s ease !important;
+  z-index: 0 !important;
+  transform: skewX(-45deg) !important;
+}
+
+#user-info-popup button:nth-child(2):hover:before {
+  left: -50% !important;
+}
+
+/* Danger Button */
+#user-info-popup button:nth-child(3) {
+  background: linear-gradient(90deg, #ff4b4b, #ff6b6b) !important;
+  color: white !important;
+  font-weight: 700 !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#user-info-popup button:nth-child(3):hover {
+  transform: scale(1.05) !important;
+  background: linear-gradient(90deg, #ff6b6b, #ff8b8b) !important;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+#user-info-popup button:nth-child(3):before {
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 300% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, rgba(255, 100, 100, 0.8), rgba(255, 150, 150, 0.8)) !important;
+  transition: all 0.3s ease !important;
+  z-index: 0 !important;
+  transform: skewX(-45deg) !important;
+}
+
+#user-info-popup button:nth-child(3):hover:before {
+  left: -50% !important;
+}
