@@ -1,0 +1,94 @@
+// Variables
+$primary-color: #0052ff;
+$secondary-color: #ff4500;
+$background-color: #f8f9fa;
+$text-color: #2d3436;
+$font-family: 'Inter', sans-serif;
+$box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+$border-radius: 10px;
+$transition: all 0.3s ease-in-out;
+
+// General Styles
+body {
+  background-color: $background-color !important;
+  font-family: $font-family !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Scoped Container
+.menu2-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .savings-section,
+  .budget-section,
+  .charts-section {
+    background: #ffffff;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: $transition;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      color: $primary-color;
+      margin-bottom: 1rem;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, $primary-color, $secondary-color);
+      font-weight: bold;
+      color: #fff;
+    }
+
+    input,
+    button {
+      border-radius: $border-radius;
+      transition: $transition;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    button {
+      background: $primary-color;
+      color: #fff;
+      font-weight: bold;
+
+      &:hover {
+        background: $secondary-color;
+      }
+    }
+  }
+
+  .charts-section {
+    .chart-container {
+      display: flex;
+      gap: 1.5rem;
+
+      canvas {
+        background: $background-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+      }
+    }
+  }
+}
+
